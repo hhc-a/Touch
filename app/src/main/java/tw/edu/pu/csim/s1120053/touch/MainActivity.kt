@@ -127,9 +127,9 @@ fun DrawCircle() {
         Canvas(modifier = Modifier){
 //            drawCircle(Color.Yellow,100f,Offset(X, Y))
 //            drawImage(handImage, Offset(X-handImage.width/2,Y-handImage.height/2))
-            for (i in 0..Fingers - 1) {
-                PaintColor = colors[i % 7]
-                drawCircle(PaintColor, 100f, Offset(X[i], Y[i]))
+            for (i in 0 until Fingers) {
+                val paintColor = colors[i % colors.size]
+                drawCircle(paintColor, 100f, Offset(X[i], Y[i]))
             }
         }
     }
